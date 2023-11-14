@@ -2,6 +2,7 @@
 TP Programacion Sobre Redes
 
 ===========================
+
 El proyecto consiste en un sistema de envío de archivos, implementando la arquitectura cliente/servidor, por medio de un Socket stream TCP.
 
 Se implementaron:
