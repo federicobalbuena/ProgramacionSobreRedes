@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------
+HandleClient
+Error: No se puede escribir datos de en la conexión de transporte: Se ha anulado una conexión establecida por el software en su equipo host.
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+HandleClient
+Error: Operación no permitida en sockets no conectados.
+---------------------------------------------------------------------------------------

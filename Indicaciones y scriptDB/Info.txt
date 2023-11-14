@@ -1,8 +1,3 @@
-# ProgramacionSobreRedes
-TP Programacion Sobre Redes
-
-===========================
-
 Nombre de usuario: usuario1
 Contraseña: pass1
 
