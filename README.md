@@ -28,6 +28,7 @@ Nombre de usuario: usuario1
 Contraseña: pass1
 
 ============================================================================================================
+
 1- Ejecutar los scripts que se encuentran en _SCRIPT_DB:
 
 Estos scrips crean la db local con la tabla y datos para realizar pruebas de validación
@@ -40,6 +41,7 @@ Para conectar a la DB se debe reemplazar el contenido del campo "Data Source" po
 servidor SQL local en la línea 11 del archivo ConnSingleton.cs en el Servidor.
  
 ============================================================================================================
+
 Origen de archivos: Cliente\bin\Debug
 
 Destino de archivos: Servidor\bin\Debug\ServerFiles
