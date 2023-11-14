@@ -38,7 +38,7 @@ Instrucciones:
 
 1- Ejecutar los scripts que se encuentran en _SCRIPT_DB:
 
-    Estos scrips crean la db local con la tabla y datos para realizar pruebas de validación
+    Estos scripts crean la db local con la tabla y datos para realizar pruebas de validación
 
 2- Abrir el proyecto ProyectoProgramacionSobreRedes
 
