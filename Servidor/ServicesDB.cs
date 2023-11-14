@@ -10,11 +10,10 @@ namespace Servidor
 {
     public static class ServicesDB
     {
-        static ConnSingleton cs = ConnSingleton.getDbInstance();//Obtengo Instancia de la conexion
+        static ConnSingleton cs = ConnSingleton.getDbInstance();
 
         public static bool iniciarSesion()
         {
-
             User user = new User("", "", "");
 
             Console.Write("Ingresa tu usuario:");
@@ -35,14 +34,13 @@ namespace Servidor
 
             string masterKey = "ClaveMaestraSecreta";
 
-            var nombreUsuario = user.userName;
-
-
+            
             string consultaUser1 = "select ISNULL(nombreUsuario, 0) from Usuario where id=1";
 
             SqlCommand comandoUser = new SqlCommand(consultaUser1, bd);
 
             string usuarioBD = comandoUser.ExecuteScalar().ToString();
+
 
             string consultaSalt1 = "select ISNULL(contraseniaSalt, 0) from Usuario where id=1";
 
@@ -57,10 +55,8 @@ namespace Servidor
 
             string hashedPassword = comandoHash.ExecuteScalar().ToString();
 
-            //Console.WriteLine("Salt en BD " + salt);
-            //Console.WriteLine("Hash en BD " + hashedPassword);
 
-            byte[] saltb = Convert.FromBase64String(salt); // R
+            byte[] saltb = Convert.FromBase64String(salt);
 
 
             bool isLoginSuccessful = VerifyPassword(user.password, saltb, hashedPassword, masterKey);
@@ -78,7 +74,6 @@ namespace Servidor
             }
         }
 
-        //Hashea la contraseña ingresada
         static string HashPassword(string password, byte[] salt, string masterKey)
         {
             int iterations = 10000;
@@ -92,8 +87,6 @@ namespace Servidor
                 }
             }
         }
-
-        // Verificar la contraseña ingresada utilizando la clave maestra
         static bool VerifyPassword(string userInputPassword, byte[] salt, string hashedPassword, string masterKey)
         {
             string hashedInputPassword = HashPassword(userInputPassword, salt, masterKey);

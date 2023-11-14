@@ -14,10 +14,8 @@ namespace Servidor
         {
             string fileName = "log_server.txt";
 
-            // Datos que se escribirán en el archivo.
             string[] lines = inputData;
 
-            // Tamaño del búfer (en bytes)
             int bufferSize = 1024;
 
             try
@@ -34,7 +32,6 @@ namespace Servidor
                     writer.Close();
                 }
 
-                //Console.WriteLine("Se guardó el archivo con exito!.");
             }
             catch (IOException e)
             {

@@ -12,25 +12,6 @@ namespace Servidor
         {
             Console.WriteLine("---------------------------------------------------------------------------------------");
         }
-
-        public static void printFileAndList(string fileName, string directory)
-        {
-            printSeparator();
-            Console.WriteLine($"Archivo recibido y guardado: {fileName}");
-            printSeparator();
-
-            string[] files = Directory.GetFiles(@directory);
-            //string[] log = new[] { "Files: " };
-
-            foreach (string f in files)
-            {
-                Console.WriteLine(f); // Mostramos los archivos en la consola
-                //log.Append(f);
-            }
-            printSeparator();
-            //Logger.writeLog(log);
-        }
-
         public static void printClassError(string className, Exception error)
         {
             string classError = className;
@@ -41,7 +22,7 @@ namespace Servidor
             Console.WriteLine(errorMessage);
             printSeparator();
             Console.WriteLine("");
-            string[] log = new[] {separator, classError, errorMessage, separator};
+            string[] log = new[] { separator, classError, errorMessage, separator };
             Logger.writeLog(log);
             Console.ReadKey();
         }

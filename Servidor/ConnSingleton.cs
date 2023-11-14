@@ -8,7 +8,7 @@ namespace Servidor
     {
 
         private static ConnSingleton dbInstance;
-        private readonly SqlConnection conn = new SqlConnection(@"Data Source=<Nombre del Servidor SQLEXPRESS>;Initial Catalog=Personas; Integrated Security=true");
+        private readonly SqlConnection conn = new SqlConnection(@"Data Source=<Nombre de Servidor SQLEXPRESS>;Initial Catalog=Personas; Integrated Security=true");
 
         private ConnSingleton()
         {
@@ -38,11 +38,4 @@ namespace Servidor
             return conn;
         }
     }
-
-    //public static void Main(string[] args)
-    //{
-    //    ConnSingleton cs = ConnSingleton.getDbInstance();
-    //    cs.GetDBConnection();
-    //    Console.WriteLine("Connection established");
-    //}
 }

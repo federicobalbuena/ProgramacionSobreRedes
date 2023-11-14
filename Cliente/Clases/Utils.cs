@@ -20,7 +20,7 @@ namespace Servidor
 
             foreach (string f in files)
             {
-                Console.WriteLine(f); // Mostramos los archivos en la consola
+                Console.WriteLine(f);
             }
             printSeparator();
         }
