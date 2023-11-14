@@ -80,9 +80,9 @@ namespace Servidor
 
         static void HandleClient(Socket client)
         {
-            Console.WriteLine("entrando a handle {0}", client.GetHashCode());
+            Console.WriteLine("esperando para entrar... - {0}", client.GetHashCode());
             _sem.Wait();
-            Console.WriteLine("estoy adentro! {0}", client.GetHashCode());
+            Console.WriteLine("estoy adentro! - {0}", client.GetHashCode());
             try
             {
 
@@ -111,12 +111,11 @@ namespace Servidor
                 byte[] responseData = Encoding.ASCII.GetBytes(responseMessage);
                 stream.Write(responseData, 0, responseData.Length);
 
-                Console.WriteLine("salgo de handle {0}", client.GetHashCode());
+                Console.WriteLine("sali!! - {0}", client.GetHashCode());
                 _sem.Release();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Paso POR ACÄ");
                 _sem.Release();
                 Utils.printClassError("HandleClient", ex);
             }
