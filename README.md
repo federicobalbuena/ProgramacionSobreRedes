@@ -52,3 +52,5 @@ Instrucciones:
 * Origen de archivos: Cliente\bin\Debug
 
 * Destino de archivos: Servidor\bin\Debug\ServerFiles
+
+  A modo de ejemplo, en la carpeta Cliente\bin\Debug se encuentra el archivo Prueba_Envio.txt
